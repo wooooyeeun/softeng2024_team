@@ -1,0 +1,15 @@
+nav {background-color: black; font-size:200%; text-align:center; word-spacing:30px}
+nav a {color:white}
+
+#logo {width:10%; border:3px solid; border-radius:50%; text-align:center; margin-left:45%; margin-top:1%; margin-bottom:1%}
+
+#icon_1 {position:absolute; margin-top:2%; left:40%}
+#icon_1 p {position:absolute; top:35%; left:40%; font-size: 15px}
+
+#icon_2 {position:absolute; margin-top:2%; left:55%}
+#icon_2 p {position:absolute; top:35%; left:35%; font-size: 15px}
+
+#time_check {position:absolute; font-size:150%; top:5%; right:10%; background-color: white; border-color: white}
+
+#profile button {background-color:lightgray; font-size:15px}
+
