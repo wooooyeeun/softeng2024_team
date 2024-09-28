@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio</title>
+        <link href="./practice.css" rel="stylesheet" type="text/css">
+
+        <script type="text/javascript" src="calculator.js"></script>
+        <script type="text/javascript" src="what_time_is_it.js"></script>
+    </head>
+    <body>
+        <div id="logo">
+            <h1><strong>신혜 & 예은</strong></h1>
+        </div>
+        <button id="time_check" onclick="whatTimeIsIt()">현재시간</button>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="./portfolio.html">Portfolio</a>
+        </nav>
+
+        <h1>Portfolio</h1>
+        <hr/>
+        <h2>[계산기]</h2>
+
+        <label for="inputA">첫 번째 숫자</label>
+        <input id="inputA" value=""><br><br>
+        <label for="operator">연산자</label>
+        <select id = "operator">
+            <option value = "" selected>선택</option>
+            <option value = "+">덧셈(+)</option>
+            <option value = "-">뺄셈(-)</option>
+            <option value = "*">곱셈(*)</option>
+            <option value = "/">나눗셈(/)</option>
+        </select><br><br>
+        <label for="inputB">두 번째 숫자</label>
+        <input id="inputB" value=""><br><br>
+
+        <button onclick="calculate()">계산</button><br><br>
+
+        <p> <span id="calculate_result"></span></p><br><br>
+
+        <a href="https://github.com/wooooyeeun/softeng2024_team/blob/main/hw04/calculate_api.py"><h3>▶ 코드 보러가기</h3></a>
+        <hr/>
+
+    </body>
+</html>
+
