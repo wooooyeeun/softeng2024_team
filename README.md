@@ -33,7 +33,7 @@
    
  - layout.html
  - <br><img src = https://github.com/user-attachments/assets/b1085e17-5d17-4925-b490-42b3247c9383 width="40%"></img>
-   <img src = https://github.com/user-attachments/assets/a50b0250-8ea3-4e1e-91fc-83e3811c97b1 width="40%"></img>
+   <br><img src = https://github.com/user-attachments/assets/a50b0250-8ea3-4e1e-91fc-83e3811c97b1 width="40%" top=0></img>
 
 
  - index.html
