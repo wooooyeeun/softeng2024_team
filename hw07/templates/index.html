@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<meta charset="utf-8">
+<div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <img src="{{ url_for('static', filename='images/index_img.png') }}" class = "idx_img">
+      </div>
+    </div>
+    <div class="row">
+      <a href="https://sfarm.jbnu.ac.kr/jsf/index.do" target="_blank" title="학과">
+        <img src="{{ url_for('static', filename='images/icon.png') }}" class = "icon_img">
+      </a>
+      <p class="icon1_name"><strong>학과</strong></p>
+
+      <a href="https://github.com/wooooyeeun/softeng2024_team" target="_blank" title="깃허브">
+        <img src="{{ url_for('static', filename='images/icon.png') }}" class = "icon_img">
+      </a>
+      <p class="icon2_name"><strong>깃허브</strong></p>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js></script>
+{% endblock %}
+
