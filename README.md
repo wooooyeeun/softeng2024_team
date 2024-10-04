@@ -6,10 +6,10 @@
  
  ### 과제06 - 홈페이지
  - index
- <br><img src = https://github.com/user-attachments/assets/fca7cd54-0f02-4bca-a058-94169e5ac1b1 width="30%"></img> <img src = https://github.com/user-attachments/assets/1e43a0fb-de43-40d8-99bc-2b6265420ef9 width="5%" align = top> <img src = https://github.com/user-attachments/assets/2c5aabe1-d757-41a2-aa03-8be9619eb21e width="50%" align = top>
+ <br><img src = https://github.com/user-attachments/assets/fca7cd54-0f02-4bca-a058-94169e5ac1b1 width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/2c5aabe1-d757-41a2-aa03-8be9619eb21e width="50%" align = top>
+ 
  - about
-<br><img src = https://github.com/user-attachments/assets/2346796c-ca0a-464d-a4fd-b1b700d52ccb width="30%"></img> <img src = https://github.com/user-attachments/assets/1e43a0fb-de43-40d8-99bc-2b6265420ef9 width="5%" align = top> <img src = https://github.com/user-attachments/assets/da2a5256-7beb-42fe-9aaf-492776eb142c width="50%" align = top>
-
+<br><img src = https://github.com/user-attachments/assets/2346796c-ca0a-464d-a4fd-b1b700d52ccb width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/da2a5256-7beb-42fe-9aaf-492776eb142c width="50%" align = top>
 
  - portfoilo
 
