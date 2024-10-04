@@ -30,6 +30,9 @@
  ### 과제07 - 템플릿을 이용한 홈페이지
  - 폴더
    <br><img src = https://github.com/user-attachments/assets/da294d3a-c4e5-4f4d-81af-4e3e0bbf0989 width="20%"></img>
+
+ - app.py
+   <br><img src = https://github.com/user-attachments/assets/d813a897-33bf-4693-8681-4e7f8b8872d3 width="30%"></img>
    
  - layout.html
  - <br><img src = https://github.com/user-attachments/assets/b1085e17-5d17-4925-b490-42b3247c9383 width="40%"></img>
@@ -47,4 +50,6 @@
 <br><img src = https://github.com/user-attachments/assets/dd9a5194-f834-4acc-bc51-e47c26032f18 width="30%"></img>
 
 - layout.css
-<br><img src = https://github.com/user-attachments/assets/b5b17a9c-c624-46c4-97eb-626a45173de1 width="30%"></img>
+<br><img src = https://github.com/user-attachments/assets/b5b17a9c-c624-46c4-97eb-626a45173de1 width="15%"></img>
+<br><img src = https://github.com/user-attachments/assets/f3205727-1751-4506-8373-9558e9e22e0f width="15%"></img>
+
