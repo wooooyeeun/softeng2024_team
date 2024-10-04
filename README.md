@@ -6,7 +6,7 @@
  
  ### 과제06 - 홈페이지
  - 폴더
- <br><img src = https://github.com/user-attachments/assets/df757d85-affe-4178-aae4-e35d0a215179 width="30%"></img>
+ <br><img src = https://github.com/user-attachments/assets/df757d85-affe-4178-aae4-e35d0a215179 width="20%"></img>
 
  - index.html
  <br><img src = https://github.com/user-attachments/assets/fca7cd54-0f02-4bca-a058-94169e5ac1b1 width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/2c5aabe1-d757-41a2-aa03-8be9619eb21e width="60%" align = top>
@@ -29,10 +29,12 @@
 
  ### 과제07 - 템플릿을 이용한 홈페이지
  - 폴더
-   <br><img src = https://github.com/user-attachments/assets/da294d3a-c4e5-4f4d-81af-4e3e0bbf0989 width="30%"></img>
+   <br><img src = https://github.com/user-attachments/assets/da294d3a-c4e5-4f4d-81af-4e3e0bbf0989 width="20%"></img>
    
  - layout.html
- - <br><img src = https://github.com/user-attachments/assets/b1085e17-5d17-4925-b490-42b3247c9383 width="30%"></img> <img src = https://github.com/user-attachments/assets/b1085e17-5d17-4925-b490-42b3247c9383 width="30%"></img>
+ - <br><img src = https://github.com/user-attachments/assets/b1085e17-5d17-4925-b490-42b3247c9383 width="40%"></img>
+   <img src = https://github.com/user-attachments/assets/a50b0250-8ea3-4e1e-91fc-83e3811c97b1 width="40%"></img>
+
 
  - index.html
  <br><img src = https://github.com/user-attachments/assets/fca7cd54-0f02-4bca-a058-94169e5ac1b1 width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/2c5aabe1-d757-41a2-aa03-8be9619eb21e width="60%" align = top>
