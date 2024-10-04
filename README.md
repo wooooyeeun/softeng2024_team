@@ -6,6 +6,7 @@
  
  ### 과제06 - 홈페이지
  <br><img src = [https://github.com/user-attachments/assets/46f1543c-2ae8-4835-8f7e-4424be7f601](https://github.com/user-attachments/assets/869fb379-14fd-46a0-8aa4-5142479fea25) width="40%"></img>
+![image](https://github.com/user-attachments/assets/fca7cd54-0f02-4bca-a058-94169e5ac1b1)
 
 
  ### 과제06 - 템플릿을 이용한 홈페이지
