@@ -28,6 +28,7 @@
 
 
  ### 과제07 - 템플릿을 이용한 홈페이지
+ * 과제06을 Flask로 변경
  - 폴더
    <br><img src = https://github.com/user-attachments/assets/da294d3a-c4e5-4f4d-81af-4e3e0bbf0989 width="20%"></img>
 
