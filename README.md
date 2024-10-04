@@ -5,7 +5,7 @@
   * 참고 : https://velog.io/@leeu2u/HTML24%EC%BD%A4%EB%B3%B4%EB%B0%95%EC%8A%A4select%EA%B8%B0%EB%B3%B8%EA%B0%92-%EC%A7%80%EC%A0%95-%EB%B9%84%ED%99%9C%EC%84%B1%ED%99%94-%ED%95%AD%EB%AA%A9-%EB%B9%84%ED%99%9C%EC%84%B1%ED%99%9
  
  ### 과제06 - 홈페이지
- <br><img src = https://github.com/user-attachments/assets/fca7cd54-0f02-4bca-a058-94169e5ac1b1 width="30%"></img> <img src = https://github.com/user-attachments/assets/1e43a0fb-de43-40d8-99bc-2b6265420ef9 width="5%" align = center> <img src = https://github.com/user-attachments/assets/2c5aabe1-d757-41a2-aa03-8be9619eb21e width="50%">
+ <br><img src = https://github.com/user-attachments/assets/fca7cd54-0f02-4bca-a058-94169e5ac1b1 width="30%"></img> <img src = https://github.com/user-attachments/assets/1e43a0fb-de43-40d8-99bc-2b6265420ef9 width="5%" align = top> <img src = https://github.com/user-attachments/assets/2c5aabe1-d757-41a2-aa03-8be9619eb21e width="50%">
 
 
 
