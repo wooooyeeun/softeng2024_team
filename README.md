@@ -55,3 +55,29 @@
 <br><img src = https://github.com/user-attachments/assets/b5b17a9c-c624-46c4-97eb-626a45173de1 width="15%"></img>
 <br><img src = https://github.com/user-attachments/assets/f3205727-1751-4506-8373-9558e9e22e0f width="15%"></img>
 
+### 과제08 - 부트스트랩 적용
+▶ 과제07에 부트스트랩 적용
+
+▶ data.csv로 저장된 데이터를 pandas로 읽어서 렌더링되도록 구현
+
+- data.csv
+<br><img src = https://github.com/user-attachments/assets/de232ade-fc91-4fb6-bc32-5b16882a56be width="30%"></img>
+
+- app.py
+<br><img src = https://github.com/user-attachments/assets/2f6e6793-dc43-4930-806b-3c922155ef6c width="30%"></img>
+
+-blog.html
+<br><img src = https://github.com/user-attachments/assets/01054722-b098-4e0d-805c-5a6cf7781610 width="30%"></img>
+
+-결과
+<br><img src = https://github.com/user-attachments/assets/82df6020-57ac-42d1-b273-ae016953873e width="30%"></img>
+
+▶ font awesome 아이콘 이용
+
+-index.html
+<br><img src = https://github.com/user-attachments/assets/ef2b35f2-dd74-453f-a11f-7b46cb2e9da5 width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/c2d0b342-e81d-4d58-a356-48adbcef9787 width="60%" align = top>
+
+-about.html
+<br><img src = https://github.com/user-attachments/assets/a9087670-3332-42ce-848e-83c476578b61 width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/6e3d3b4f-7190-45b7-8402-f8ba7bb579c2 width="60%" align = top>
+
+
