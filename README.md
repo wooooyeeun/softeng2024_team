@@ -84,6 +84,7 @@
 ▶ 과제08 변경
 
 ▶ 폴더 구조
+
 <img src = https://github.com/user-attachments/assets/3bd382cd-0555-4d61-8deb-8baae83444ad width="30%"></img>
 
 ▶ url.py로 url 설정
