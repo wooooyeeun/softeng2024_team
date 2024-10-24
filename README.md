@@ -80,4 +80,10 @@
 -about.html
 <br><img src = https://github.com/user-attachments/assets/a9087670-3332-42ce-848e-83c476578b61 width="50%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/6e3d3b4f-7190-45b7-8402-f8ba7bb579c2 width="20%" align = top>
 
+ ### 과제09 - django로 홈페이지 만들기
+ ▶ 과제08 변경
+
+ ▶ 
+ <img src="{{ url_for('static', filename='images/index_img.png') }}"> → <img src="{% static 'single_pages/images/index_img.png' %}">
+
 
