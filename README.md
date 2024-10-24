@@ -84,14 +84,13 @@
 ▶ 과제08 변경
 
 ▶ 폴더 구조
-
-<img src = https://github.com/user-attachments/assets/3bd382cd-0555-4d61-8deb-8baae83444ad width="30%"></img>
+ <br><img src = https://github.com/user-attachments/assets/3bd382cd-0555-4d61-8deb-8baae83444ad width="30%"></img>
 
 ▶ url.py로 url 설정
-<img src = https://github.com/user-attachments/assets/438debae-3b84-45e5-beda-0c37f8d9d150 width="30%"></img>
+ <br><img src = https://github.com/user-attachments/assets/438debae-3b84-45e5-beda-0c37f8d9d150 width="30%"></img>
 
 ▶ app.py → views.py
-<img src = https://github.com/user-attachments/assets/ccab1671-ffd2-4769-aea1-c3a8694927a5 width="30%"></img>
+ <br><img src = https://github.com/user-attachments/assets/ccab1671-ffd2-4769-aea1-c3a8694927a5 width="30%"></img>
 
 ▶ 기타 변경 사항
 - img src="{{ url_for('static', filename='images/index_img.png') }} → img src="{% static 'single_pages/images/index_img.png' %}"
