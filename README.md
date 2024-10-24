@@ -80,10 +80,23 @@
 -about.html
 <br><img src = https://github.com/user-attachments/assets/a9087670-3332-42ce-848e-83c476578b61 width="50%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/6e3d3b4f-7190-45b7-8402-f8ba7bb579c2 width="20%" align = top>
 
- ### 과제09 - django로 홈페이지 만들기
- ▶ 과제08 변경
+### 과제09 - django로 홈페이지 만들기
+▶ 과제08 변경
 
- ▶ 
- "<img src="{{ url_for('static', filename='images/index_img.png') }}"> → <img src="{% static 'single_pages/images/index_img.png' %}">"
+▶ 폴더 구조
+<img src = https://github.com/user-attachments/assets/3bd382cd-0555-4d61-8deb-8baae83444ad width="30%"></img>
+
+▶ url.py로 url 설정
+<img src = https://github.com/user-attachments/assets/438debae-3b84-45e5-beda-0c37f8d9d150 width="30%"></img>
+
+▶ app.py → views.py
+<img src = https://github.com/user-attachments/assets/ccab1671-ffd2-4769-aea1-c3a8694927a5 width="30%"></img>
+
+▶ 기타 변경 사항
+- img src="{{ url_for('static', filename='images/index_img.png') }} → img src="{% static 'single_pages/images/index_img.png' %}"
+- {% extends 'layout.html' %} → {% extends './layout.html' %}
+- {% load static %} 추가
+- return render_template('about.html', title='About') → return render(request, 'single_pages/about.html', {'title': 'About'})
+
 
 
