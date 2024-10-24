@@ -84,6 +84,6 @@
  ▶ 과제08 변경
 
  ▶ 
- <img src="{{ url_for('static', filename='images/index_img.png') }}"> → <img src="{% static 'single_pages/images/index_img.png' %}">
+ "<img src="{{ url_for('static', filename='images/index_img.png') }}"> → <img src="{% static 'single_pages/images/index_img.png' %}">"
 
 
