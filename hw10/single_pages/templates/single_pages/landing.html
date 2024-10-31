@@ -1,0 +1,25 @@
+{% extends './layout.html' %}
+{% load static %}
+
+{% block content %}
+<meta charset="utf-8">
+<div class="container-fluid">
+    <div class="row">
+      <div class="col">
+          <img src="{% static 'single_pages/images/index_img.png' %}" class="idx_img">
+      </div>
+    </div>
+    <div class="row">
+        <a href="https://sfarm.jbnu.ac.kr/jsf/index.do" target="_blank" class="homepage_icon" title="학과">
+            <i class="fas fa-globe fa-7x"></i>
+        </a>
+        <a href="https://github.com/wooooyeeun/softeng2024_team" target="_blank" class="github_icon" title="깃허브">
+            <i class="fab fa-github fa-7x"></i>
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js></script>
+{% endblock %}
