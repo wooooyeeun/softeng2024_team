@@ -98,5 +98,35 @@
 - {% load static %} 추가
 - return render_template('about.html', title='About') → return render(request, 'single_pages/about.html', {'title': 'About'})
 
+### 과제10 - django로 blog 게시판 만들기
+▶ 과제09 변경
 
+▶ 폴더 구조
+ <br><img src = https://github.com/user-attachments/assets/441f4fc3-5926-4e25-b0e3-18b2099d0510 width="30%"></img>
+
+▶ blog 폴더 구조
+ <br><img src = https://github.com/user-attachments/assets/eff19d55-f28e-4773-ae33-29f879e21f84 width="30%"></img>
+
+▶ blog/index.html => /admin/에서 글 작성 시 해당 내용이 나타나는 게시판
+ <br><img src = https://github.com/user-attachments/assets/41d1c2b4-10df-4bba-91ce-b2fa4272c78c width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/d7a2cd89-0286-41fd-9c37-acb8c3b0dabb width="60%" align = top>
+<br><img src = https://github.com/user-attachments/assets/82365ff2-d9a3-48b7-a975-2f00a5907792 width="30%"></img>
+
+▶ blog/single_post_page.html => index에서 제목 누르면 나타나는 상세페이지
+ <br><img src = https://github.com/user-attachments/assets/e8fa32f0-fa68-44c6-b23d-e4ac35338dff width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/d7a2cd89-0286-41fd-9c37-acb8c3b0dabb width="60%" align = top>
+<br><img src = https://github.com/user-attachments/assets/f2be4e70-af1a-4019-bf76-991b992d48f0 width="30%"></img>
+
+▶ blog/models.py
+ <br><img src = https://github.com/user-attachments/assets/704cc24d-5bfd-44b3-9b7b-9817c706ed30 width="30%"></img>
+
+▶ blog/urls.py
+ <br><img src = https://github.com/user-attachments/assets/29813da4-1150-40b6-99c2-e4b22ca58bb0 width="30%"></img>
+
+▶ blog/views.py
+ <br><img src = https://github.com/user-attachments/assets/ed333cf6-17aa-4b8e-a21c-96194a547471 width="30%"></img>
+
+▶ se10_prj/urls.py
+ <br><img src = https://github.com/user-attachments/assets/ec10708b-d355-4ed3-afd7-5b88b8d136c4 width="30%"></img>
+
+▶ layout.html => 'community' 버튼 추가
+ <br><img src = https://github.com/user-attachments/assets/f7c23528-aaa0-4861-b070-dedebf7199ba width="30%"></img>
 
