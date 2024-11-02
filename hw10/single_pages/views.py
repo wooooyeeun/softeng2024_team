@@ -1,5 +1,3 @@
-
-
 from django.shortcuts import render
 import pandas as pd
 
@@ -17,7 +15,10 @@ def blog_list(request):
         post_list.append({
             "title": row['title'],
             "content": row['content']})
-    return render(request, 'single_pages/blog.html', {'title': "blog", 'posts': post_list})
+    return render(request, 'single_pages/blog_page.html', {'title': "Blog", 'posts': post_list})
 
 def portfolio_page(request):
     return render(request, 'single_pages/portfolio.html', {'title': 'Portfolio'})
+
+
+
