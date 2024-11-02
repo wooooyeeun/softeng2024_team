@@ -1,10 +1,10 @@
 # softeng2024_team
-### 과제04 - 계산기 
+## [과제04 - 계산기] 
 - html 콤보박스를 이용하여 연산자 선택
 <br><img src = https://github.com/user-attachments/assets/46f1543c-2ae8-4835-8f7e-4424be7f6016 width="40%"></img>
   * 참고 : https://velog.io/@leeu2u/HTML24%EC%BD%A4%EB%B3%B4%EB%B0%95%EC%8A%A4select%EA%B8%B0%EB%B3%B8%EA%B0%92-%EC%A7%80%EC%A0%95-%EB%B9%84%ED%99%9C%EC%84%B1%ED%99%94-%ED%95%AD%EB%AA%A9-%EB%B9%84%ED%99%9C%EC%84%B1%ED%99%9
  
- ### 과제06 - 홈페이지
+ ## [과제06 - 홈페이지]
  - 폴더
  <br><img src = https://github.com/user-attachments/assets/df757d85-affe-4178-aae4-e35d0a215179 width="20%"></img>
 
@@ -27,7 +27,7 @@
 <br><img src = https://github.com/user-attachments/assets/bd53454e-4f8f-4653-8d66-22c90d03fc22 width="30%"></img>
 
 
- ### 과제07 - 템플릿을 이용한 홈페이지
+ ## [과제07 - 템플릿을 이용한 홈페이지]
   ▶ Flask를 이용하여 과제06 변경
   
  - 폴더
@@ -55,7 +55,7 @@
 <br><img src = https://github.com/user-attachments/assets/b5b17a9c-c624-46c4-97eb-626a45173de1 width="15%"></img>
 <br><img src = https://github.com/user-attachments/assets/f3205727-1751-4506-8373-9558e9e22e0f width="15%"></img>
 
-### 과제08 - 부트스트랩 적용
+## [과제08 - 부트스트랩 적용]
 ▶ 과제07에 부트스트랩 적용
 
 ▶ data.csv로 저장된 데이터를 pandas로 읽어서 렌더링되도록 구현
@@ -80,7 +80,7 @@
 -about.html
 <br><img src = https://github.com/user-attachments/assets/a9087670-3332-42ce-848e-83c476578b61 width="50%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/6e3d3b4f-7190-45b7-8402-f8ba7bb579c2 width="20%" align = top>
 
-### 과제09 - django로 홈페이지 만들기
+## [과제09 - django로 홈페이지 만들기]
 ▶ 과제08 변경
 
 ▶ 폴더 구조
@@ -98,7 +98,7 @@
 - {% load static %} 추가
 - return render_template('about.html', title='About') → return render(request, 'single_pages/about.html', {'title': 'About'})
 
-### 과제10 - django로 blog 게시판 만들기
+## [과제10 - django로 blog 게시판 만들기]
 ▶ 과제09 변경
 
 ▶ 폴더 구조
@@ -108,12 +108,10 @@
  <br><img src = https://github.com/user-attachments/assets/eff19d55-f28e-4773-ae33-29f879e21f84 width="30%"></img>
 
 ▶ blog/index.html => /admin/에서 글 작성 시 해당 내용이 나타나는 게시판
- <br><img src = https://github.com/user-attachments/assets/41d1c2b4-10df-4bba-91ce-b2fa4272c78c width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/d7a2cd89-0286-41fd-9c37-acb8c3b0dabb width="60%" align = top>
-<br><img src = https://github.com/user-attachments/assets/82365ff2-d9a3-48b7-a975-2f00a5907792 width="30%"></img>
+ <br><img src = https://github.com/user-attachments/assets/41d1c2b4-10df-4bba-91ce-b2fa4272c78c width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/82365ff2-d9a3-48b7-a975-2f00a5907792 width="60%" align = top>
 
 ▶ blog/single_post_page.html => index에서 제목 누르면 나타나는 상세페이지
- <br><img src = https://github.com/user-attachments/assets/e8fa32f0-fa68-44c6-b23d-e4ac35338dff width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/d7a2cd89-0286-41fd-9c37-acb8c3b0dabb width="60%" align = top>
-<br><img src = https://github.com/user-attachments/assets/f2be4e70-af1a-4019-bf76-991b992d48f0 width="30%"></img>
+ <br><img src = https://github.com/user-attachments/assets/e8fa32f0-fa68-44c6-b23d-e4ac35338dff width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/f2be4e70-af1a-4019-bf76-991b992d48f0 width="60%" align = top>
 
 ▶ blog/models.py
  <br><img src = https://github.com/user-attachments/assets/704cc24d-5bfd-44b3-9b7b-9817c706ed30 width="30%"></img>
