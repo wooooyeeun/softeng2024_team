@@ -154,4 +154,4 @@
 <br><img src = https://github.com/user-attachments/assets/cd22b9d3-2e5c-49c3-9496-cf1c038b82b4 width="30%"></img>
 
 - 결과
-  <br><img src = https://github.com/user-attachments/assets/86f456d7-69cc-40e2-8ad5-b823af0fa1b0 width="30%"></img>
+  <br><img src = https://github.com/user-attachments/assets/86f456d7-69cc-40e2-8ad5-b823af0fa1b0 width="60%"></img>
