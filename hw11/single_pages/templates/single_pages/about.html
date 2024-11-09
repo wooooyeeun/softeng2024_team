@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+        <meta charset="utf-8">
+        <div class="container-fluid">
+             <div class="row">
+                <div class="col">
+                    <img src="{% static 'single_pages/images/side_img.jpg' %}" class="img_top">
+                    <p class = "menu_name"><strong>About</strong></p>
+                </div>
+             </div>
+            <div class="row">
+                <div class="col-md-8 my-3">
+                    <img src="{% static 'single_pages/images/profile.jpg' %}" height="200px">
+                </div>
+                <aside class="col-md-2 my-5 d-flex flex-column">
+                    <h3><strong>[구성원]</strong></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">박신혜</li>
+                        <li class="list-group-item">우예은</li>
+                    </ul>
+                 </aside>
+            </div>
+            <div class="row d-flex flex-column">
+                <div class="col-md-8 my-3">
+                    <h3>박신혜</h3>
+                    <p>전북대학교 스마트팜학과 2학년 박신혜입니다.</p>
+                    <a href="https://github.com/shinhye04" target="_blank" title="신혜의 깃허브">
+                        <i class="fab fa-github fa-3x"></i>
+                    </a>
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 my-3 ">
+                    <img src="{% static 'single_pages/images/profile.jpg' %}" height="200px">
+                </div>
+            </div>
+            <div class="row d-flex flex-column">
+                <div class="col-md-8 my-3">
+                    <h3>우예은</h3>
+                    <p>전북대학교 스마트팜학과 2학년 우예은입니다. </p>
+                    <a href="https://github.com/wooooyeeun" target="_blank" title="예은이의 깃허브">
+                        <i class="fab fa-github fa-3x"></i>
+                    </a>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+

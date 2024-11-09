@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html lang="kr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../../../favicon.ico">
+
+        {% if title %}
+            <title>신혜 & 예은 - {{title}}</title>
+        {% else %}
+            <title>신혜 & 예은</title>
+        {% endif %}
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+              integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="{% static 'single_pages/practice.css' %}" type="text/css">
+
+        <script type="text/javascript" src="{% static 'single_pages/what_time_is_it.js' %}"></script>
+        <script type="text/javascript" src="{% static 'single_pages/caculator.js' %}"></script>
+        {% block stylesheet %}{% endblock %}
+    </head>
+
+    <body>
+        <header class="site-header">
+            <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-info mb-4">
+                <a class="navbar-brand" href="{% url 'single_pages:landing_page' %}">신혜 & 예은</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'single_pages:landing_page' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'single_pages:about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'single_pages:blog_list' %}">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'single_pages:portfolio_page' %}">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'blog:post_list' %}">Community</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'todo_app:index' %}">Todo</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-nav mt-mb-0">
+                      <a class="nav-item nav-link" href="" onclick="whatTimeIsIt()">현재시간</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    <main role="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"
+            integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+
+    {% block scripts %}{% endblock %}
+    </body>
+</html>
+

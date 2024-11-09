@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+<meta charset="utf-8">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <img src="{% static 'todo_app/images/side_img.jpg' %}" class="img_top">
+            <p class = "menu_name"><strong>Todo List</strong></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 my-3">
+            <h3>항목 삭제</h3>
+
+        <p><i>{{ todo_list.title }}</i>의 <b>{{ object.title }}</b>항목을 삭제하시겠습니까?</p>
+
+        <form method="POST">
+            {% csrf_token %}
+            <input
+                value="삭제"
+                type="submit">
+            <input
+                value="닫기"
+                type="button"
+                onclick="location.href='{% url "todo_app:list" todo_list.id %}';">
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js></script>
+{% endblock %}
+

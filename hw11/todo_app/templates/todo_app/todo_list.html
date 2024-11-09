@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+<meta charset="utf-8">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <img src="{% static 'todo_app/images/side_img.jpg' %}" class="img_top">
+            <p class = "menu_name"><strong>Todo List</strong></p>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-8 my-3">
+                <div>
+                    <h5>{{ todo_list.title | upper }}</h5>
+                </div>
+                <ul>
+                    {% for todo in object_list %}
+                    <li>
+                        <div
+                                role="button"
+                                onclick="location.href=
+                                '{% url "todo_app:item-update" todo_list.id todo.id %}'">
+                                {{ todo.title }}
+                                (Due {{ todo.due_date | date:"l, F j" }})
+                        </div>
+                        {% empty %}
+                        <p>이 목록에는 할 일이 없습니다.</p>
+                        {% endfor %}
+                    </li>
+                </ul>
+                <p>
+                    <input
+                            value="할 일 추가"
+                            type="button"
+                            onclick="location.href='{% url "todo_app:item-add" todo_list.id %}'" />
+                    <input
+                            value="목록 삭제"
+                            type="button"
+                            onclick="location.href=
+                            '{% url "todo_app:list-delete" todo_list.id %}'" />
+                    <input
+                            value="이전"
+                            type="button"
+                            onclick="location.href=
+                            '{% url "todo_app:index" %}'" />
+                </p>
+            </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+        <script src=https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js></script>
+{% endblock %}
+

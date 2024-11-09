@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<meta charset="utf-8">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <img src="{% static 'single_pages/images/side_img.jpg' %}" class="img_top">
+            <p class = "menu_name"><strong>Portfolio</strong></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 my-3">
+            <h2><strong>[계산기]</strong></h2><br>
+            <label for="inputA">첫 번째 숫자</label>
+            <input id="inputA" value=""><br><br>
+            <label for="operator">연산자</label>
+            <select id = "operator">
+                <option value = "" selected>선택</option>
+                <option value = "+">덧셈(+)</option>
+                <option value = "-">뺄셈(-)</option>
+                <option value = "*">곱셈(*)</option>
+                <option value = "/">나눗셈(/)</option>
+            </select><br><br>
+            <label for="inputB">두 번째 숫자</label>
+            <input id="inputB" value=""><br><br>
+            <button type="button" onclick="calculate()">계산</button><br>
+        </div>
+        <aside class="col-md-2 my-5 d-flex flex-column">
+            <h3><strong>[목차]</strong></h3>
+            <ul class="list-group">
+                <li class="list-group-item">계산기</li>
+            </ul>
+        </aside>
+    </div>
+    <div class="row">
+        <div class="result col-md-1">
+            <h3>결과 →</h3>
+        </div>
+        <div class="result col-md-1">
+            <h3><span id="calculate_result"></span></h3><br><br>
+        </div>
+    </div>
+    <div class="row d-flex flex-column">
+        <a href="https://github.com/wooooyeeun/softeng2024_team/blob/main/hw04/calculate_api.py"><h5>▶ 코드 보러가기</h5></a>
+    </div>
+    <hr/>
+</div>
+{% endblock %}
+

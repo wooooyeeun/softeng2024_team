@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+<meta charset="utf-8">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <img src="{% static 'todo_app/images/side_img.jpg' %}" class="img_top">
+            <p class = "menu_name"><strong>Todo List</strong></p>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-8 my-3">
+                {% if object_list %}
+                <h2><strong>[할 일 목록]</strong></h2>
+                {% endif %}
+                <ul>
+                    {% for todolist in object_list %}
+                    <li>
+                        <div
+                            role="button"
+                            onclick="location.href='{% url "todo_app:list" todolist.id %}'">
+                            {{ todolist.title }}
+                        </div>
+                    </li>
+                    {% empty %}
+                    <h4>할 일이 없습니다!</h4>
+                    {% endfor %}
+                </ul>
+                <p>
+                    <input
+                        value="목록 추가"
+                        type="button"
+                        onclick="location.href='{% url "todo_app:list-add" %}'"/>
+                </p>
+            </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js></script>
+{% endblock %}
+
