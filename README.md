@@ -128,3 +128,30 @@
 ▶ layout.html => 'community' 버튼 추가
  <br><img src = https://github.com/user-attachments/assets/f7c23528-aaa0-4861-b070-dedebf7199ba width="30%"></img>
 
+## [과제11 - ToDo App 만들기]
+
+▶ https://realpython.com/django-todo-lists/
+
+▶ FBV → CBV 변환
+- blog/views.py
+  <br><img src = https://github.com/user-attachments/assets/2477ef98-e8f7-4302-912f-998904ea70aa width="30%"></img>
+- blog/index.html → blog/post_list.html 이름 변경
+- blog/single_post_page.html → blog/post_detail.html 이름 변경
+
+▶ ToDo App 만들기
+- todo_app 추가
+ <br><img src = https://github.com/user-attachments/assets/4e1a6840-9f29-4253-85fb-f14d9660dcad width="30%"></img>
+
+- models.py
+<br><img src = https://github.com/user-attachments/assets/398a718d-5f0c-44eb-ba9a-af90598b6f61 width="30%"></img>
+
+- views.py
+<br><img src = https://github.com/user-attachments/assets/978379cf-9157-40f6-ae04-750702f5471d width="30%"></img>
+<br><img src = https://github.com/user-attachments/assets/eebe8b5f-f37f-448e-b99f-eb6614a24495 width="30%"></img>
+<br><img src = https://github.com/user-attachments/assets/26877a0e-c72c-489b-96a0-0bda0f4c694f width="30%"></img>
+
+- urls.py
+<br><img src = https://github.com/user-attachments/assets/cd22b9d3-2e5c-49c3-9496-cf1c038b82b4 width="30%"></img>
+
+- 결과
+  <br><img src = https://github.com/user-attachments/assets/86f456d7-69cc-40e2-8ad5-b823af0fa1b0 width="30%"></img>
