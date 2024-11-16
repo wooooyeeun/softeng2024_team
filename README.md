@@ -155,3 +155,34 @@
 
 - 결과
   <br><img src = https://github.com/user-attachments/assets/86f456d7-69cc-40e2-8ad5-b823af0fa1b0 width="60%"></img>
+
+## [과제12 - 템플릿 적용하기]
+▶ startbootstrap
+- https://github.com/StartBootstrap/startbootstrap-blog-home => 'index.html' → 'post_list.html'
+- https://github.com/StartBootstrap/startbootstrap-blog-post => 'index.html' → 'post_detail.html'
+  
+▶ 폴더 구조
+<br><img src = https://github.com/user-attachments/assets/9fa30a8d-1c75-4d97-829d-2d5836a6a65b width="30%"></img>
+
+▶ 모듈화하기
+- footer.html
+  1. 기존 post_list.html 파일에서 <footer> 태그 잘라낸 후 새로운 파일 footer.html 생성하여 붙여넣기.
+  2. layout.html → {% include 'blog/footer.html' %}
+  3. 결과
+     <br><img src = https://github.com/user-attachments/assets/a6b6cb57-47ea-4c83-8070-6dca8f3badac width="30%"></img>
+
+- navbar.html
+  1. 기존 post_list.html 파일에서 <nav> 태그 잘라낸 후 새로운 파일 navbar.html 생성하여 붙여넣기.
+  2. layout.html → {% include 'blog/navbar.html' %}
+  3. 결과
+     <br><img src = https://github.com/user-attachments/assets/4be28d66-f12a-4f05-8479-7f7f0c8197b2 width="30%"></img>
+
+- layout.html : post_list.html, post_detail.html 파일에서 겹치는 부분 이동시키기
+ <br><img src = https://github.com/user-attachments/assets/25f6c8b6-9848-46f1-b8ac-afa5612ce12e width="30%"></img>
+ <br><img src = https://github.com/user-attachments/assets/7a0e8f66-32fc-494d-ac56-2f16e9e8a398 width="30%"></img>
+
+- post_list.html : admin에서 작성한 게시글 미리보기
+  <br><img src = https://github.com/user-attachments/assets/3ba12d66-44d8-4c3e-876a-fcce326d320c width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/a776a7c4-b965-46f0-992a-50d6166908d4 width="60%" align = top>
+
+- post_detail.html : 특정 게시물 상세페이지
+ <br><img src = https://github.com/user-attachments/assets/b8415934-963c-4063-bcf2-3a1b43c19a75 width="30%"></img> <img src = https://github.com/user-attachments/assets/4bcd66de-fd30-408f-a727-99c0b306749e width="5%" align = top> <img src = https://github.com/user-attachments/assets/9d4d8132-897a-4879-ae05-21a2d79a771f width="60%" align = top>
