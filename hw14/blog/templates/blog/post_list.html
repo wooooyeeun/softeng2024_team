@@ -1,0 +1,79 @@
+{% extends 'blog/layout.html' %}
+{% load static %}
+{% block header %}
+    <header class="py-5 bg-light border-bottom mb-4">
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 class="fw-bolder">신혜와 예은이의 블로그에 오신 것을 환영합니다!</h1>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+{% block content %}
+
+    {% if user.is_authenticated %}
+        {% if user.is_superuser or user.is_staff %}
+            <a class="btn btn-info btn-sm float-end" href="./create_post" role="button"><i class="fas fa-pen"></i>&nbsp;&nbsp;New Post</a>
+        {% endif %}
+    {% endif %}
+
+    <h1>Blog
+        {% if category %}<span class="badge bg-secondary">{{ category }}</span>{% endif %}
+        {% if tag %}<span class="badge bg-secondary"><i class="fas fa-tags"></i>{{ tag }} ({{ tag.post_set.count }})</span>{% endif %}
+    </h1>
+
+    {% for p in post_list %}
+    <div class="card mt-5 mb-4" id="post-{{ p.pk }}">
+        {% if p.head_image %}
+            <img class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} head image" style="width:850px; height:300px"/>
+        {% else %}
+             <img class="card-img-top" src="https://picsum.photos/seed/{{ p.id }}/750/300" alt="random_image" /></a>
+        {% endif %}
+        <div class="card-body">
+             {% if p.category %}
+                <span class="badge bg-secondary float-end">{{ p.category }}</span>
+            {% else %}
+                <span class="badge bg-secondary float-end">미분류</span>
+            {% endif %}
+
+            <div class="small text-muted">{{ p.updated_at }}</div>
+            <h2 class="card-title">{{ p.title }}</h2>
+            {% if p.hook_text %}
+                <h5 class="text-muted">{{ p.hook_text }}</h5>
+            {% endif %}
+            <p class="card-text">{{ p.content | truncatewords:45 }}</p>
+
+            {% if p.tags.exists %}
+                <i class="fas fa-tags"></i>
+                {% for tag in p.tags.iterator %}
+                    <a href="{{ tag.get_absolute_url }}"><span class="badge bg-pill bg-light text-black">{{ tag }}</span></a>
+                {% endfor %}
+                <br/>
+                <br/>
+            {% endif %}
+
+            <a class="btn btn-primary" href="{{ p.get_absolute_url }}">Read more →</a>
+        </div>
+            <div class="card-footer text-muted">
+            Posted on {{p.created }} by
+            <a href="#">{{ p.author | upper }}</a>
+        </div>
+    </div>
+
+    {% endfor %}
+    <nav aria-label="Pagination">
+        <hr class="my-0" />
+        <ul class="pagination justify-content-center my-4">
+            {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1" tabindex="-1" aria-disabled="true">처음</a></li>
+            {% endif %}
+            {% for i in page_obj.paginator.page_range %}
+            <li class="page-item {% if page_obj.number == i %}active{% endif %}"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+            {% endfor %}
+            {% if page_obj.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">끝</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+{% endblock %}
+
