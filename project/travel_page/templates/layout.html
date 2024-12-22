@@ -44,6 +44,8 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="{% static 'travel_page/js/slider.js' %}"></script>
     <script src="{% static 'travel_page/js/region.js' %}"></script>
+    <script>function showNewListForm() {document.getElementById('newListForm').style.display = 'block';}
+    function hideNewListForm() {document.getElementById('newListForm').style.display = 'none';}</script>
 </body>
         {% include 'footer.html' %}
     {% block scripts %}{% endblock %}

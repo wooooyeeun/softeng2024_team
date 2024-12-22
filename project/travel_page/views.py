@@ -7,6 +7,12 @@ from django.utils.text import slugify
 import random
 import csv
 import os
+from .utils import get_weather
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # views.py 파일의 디렉토리
+region_csv_path = os.path.join(BASE_DIR, 'static', 'travel_page', 'data', 'region_data.csv')
+travel_csv_path = os.path.join(BASE_DIR, 'static', 'travel_page', 'data', 'travel_data.csv')
+
 
 def index(request):
     images = [
@@ -30,14 +36,13 @@ def load_region_data(csv_file_path):
         with open(csv_file_path, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                category = row['category']
-                region = row['region']
-                name = row['name']
-                image = row['image']
+                category = row['category'].strip()
+                region = row['region'].strip()
+                name = row['name'].strip()
+                image = row['image'].strip()
 
-                # 데이터 구조 확인
                 if category not in data:
-                    continue
+                    data[category] = {}
                 if region not in data[category]:
                     data[category][region] = []
 
@@ -51,21 +56,21 @@ def load_region_data(csv_file_path):
 
 # 지역별 페이지
 def region(request):
-    region_csv_path = os.path.join('travel_page/static/travel_page/data', 'region_data.csv')
-    travel_csv_path = os.path.join('travel_page/static/travel_page/data', 'travel_data.csv')
-
     jeonbuk = []
     jeonnam = []
+    weather_data = {}
     category_data = load_region_data(travel_csv_path)
 
     try:
         with open(region_csv_path, encoding='utf-8') as file:
             reader = csv.DictReader(file)
             for row in reader:
+                region_name = row['region_eng']
                 if row['province'] == '전라북도':
                     jeonbuk.append({'name': row['region'], 'image': row['image']})
                 elif row['province'] == '전라남도':
                     jeonnam.append({'name': row['region'], 'image': row['image']})
+                weather_data[row['region']] = get_weather(region_name)
     except Exception as e:
         print(f"Error reading region_data.csv: {e}")
 
@@ -73,6 +78,7 @@ def region(request):
         'jeonbuk': jeonbuk,
         'jeonnam': jeonnam,
         'category_data': category_data,
+        'weather_data': weather_data
     })
 
 def detail_view(request, name):
@@ -219,6 +225,5 @@ def tag_page(request, slug):
             'no_category_post_count': Post.objects.filter(category=None).count(),
         }
     )
-
 
 

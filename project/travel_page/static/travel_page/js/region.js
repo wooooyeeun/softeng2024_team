@@ -24,19 +24,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 지역 선택 함수
+
+
+    // 카테고리 선택 함수
+    document.getElementById('category-select').addEventListener('change', (event) => {
+    currentCategory = event.target.value;
+
+    if (currentCategory === 'weather') {
+        document.getElementById('photo-container').style.display = 'none';
+        document.getElementById('weather-container').style.display = 'flex';
+
+        // 선택한 지역에 해당하는 날씨만 표시
+        document.querySelectorAll('#weather-container .weather-card').forEach(card => {
+            if (card.dataset.region === currentRegion) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    } else {
+        document.getElementById('photo-container').style.display = 'flex';
+        document.getElementById('weather-container').style.display = 'none';
+        showCategoryPhotos(currentCategory);
+    }
+});
     window.selectRegion = function (region) {
         currentRegion = region;
         document.querySelectorAll(`#${currentTab} .region-card`).forEach(card => {
             card.classList.toggle('active', card.dataset.region === region);
         });
+        if (currentCategory === 'weather') {
+        document.querySelectorAll('#weather-container .weather-card').forEach(card => {
+            card.style.display = card.dataset.region === currentRegion ? 'block' : 'none';
+        });
+    }
         showCategoryPhotos(currentCategory);
     };
-
-    // 카테고리 선택 함수
-    document.getElementById('category-select').addEventListener('change', (event) => {
-        currentCategory = event.target.value;
-        showCategoryPhotos(currentCategory);
-    });
 
     // 사진 렌더링 함수
     window.showCategoryPhotos = function (category) {
@@ -63,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+
     // 탭 전환 함수
     document.querySelectorAll('.tab').forEach(tab => {
         tab.addEventListener('click', () => {
@@ -75,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 content.classList.toggle('active', content.id === currentTab);
             });
 
+            selectRegion(currentRegion);
             showCategoryPhotos(currentCategory);
         });
     });

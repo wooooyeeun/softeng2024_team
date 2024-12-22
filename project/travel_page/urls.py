@@ -12,6 +12,5 @@ urlpatterns = [
     path('tag/<str:slug>/', views.tag_page, name='tag_page'),
     path('category/<str:slug>/', views.category_page, name='category_page'),
     path('post_list/', views.PostList.as_view(), name='post_list'),
-    path('<int:pk>/', views.PostDetail.as_view(), name='post_detail'),# 카테고리별 선택 페이지
-
+    path('<int:pk>/', views.PostDetail.as_view(), name='post_detail'),
 ]

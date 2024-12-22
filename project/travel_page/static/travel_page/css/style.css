@@ -182,7 +182,7 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
-
+.navmenu a
 .image-container:hover img {
     transform: scale(1.05); /* 마우스 올릴 때 살짝 확대 */
 }
@@ -201,14 +201,6 @@
     justify-content: center;
     margin-top: 20px;
 }
-
-/*.region-card {*/
-/*    position: relative;*/
-/*    text-align: center;*/
-/*    cursor: pointer;*/
-/*    opacity: 0.5; !* 기본 반투명 *!*/
-/*    transition: opacity 0.3s ease, transform 0.3s ease;*/
-/*}*/
 
 
 .tab.active {
@@ -291,15 +283,16 @@
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.photo-grid {
+.photo-grid, .weather-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
+    align-items: center;
 }
 
-.photo-card {
+.photo-card, .weather-card {
     width: 200px;
     text-align: center;
     border: 1px solid #ddd;
@@ -320,9 +313,9 @@
     font-weight: bold;
 }
 
-.photo-card:hover {
+.photo-card:hover, .weather-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .photo-card img:hover {
@@ -654,4 +647,14 @@
     display: none;
 }
 
-image
+.todo-list {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        #newListForm {
+            display: none;
+            margin-top: 10px;
+        }

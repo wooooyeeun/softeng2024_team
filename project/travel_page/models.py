@@ -2,6 +2,15 @@ from django.db import models
 from django.contrib.auth.models import User
 import os
 
+class TravelDestination(models.Model):
+    name = models.CharField(max_length=100)  # 여행지 이름
+    location = models.CharField(max_length=100)  # 위치 (도시명)
+    description = models.TextField()  # 설명
+    created_at = models.DateTimeField(auto_now_add=True)  # 생성 시간
+
+    def __str__(self):
+        return self.name
+
 class Tag(models.Model):
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=200, unique=True, allow_unicode=True)
