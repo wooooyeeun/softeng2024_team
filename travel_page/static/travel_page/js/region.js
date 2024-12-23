@@ -62,29 +62,27 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // 사진 렌더링 함수
-    window.showCategoryPhotos = function (category) {
-        photoContainer.innerHTML = '';
-        let photos = [];
+   window.showCategoryPhotos = function (category) {
+    photoContainer.innerHTML = '';
+    let photos = categoryData[category][currentRegion] || [];
 
-        photos = categoryData[category][currentRegion] || [];
-
-        if (photos.length === 0) {
-            photoContainer.innerHTML = `<p>해당 지역 및 카테고리에 대한 데이터가 없습니다.</p>`;
-        } else {
-            photos.forEach(photo => {
-                const photoCard = document.createElement('div');
-                photoCard.className = 'photo-card';
-                photoCard.innerHTML = `
-                    <img src="/static/travel_page/images/${photo.image}" alt="${photo.name}">
-                    <h3>${photo.name}</h3>
-                `;
-                photoCard.addEventListener('click', () => {
-                    window.location.href = `/detail/${encodeURIComponent(photo.name)}/`;
-                });
-                photoContainer.appendChild(photoCard);
+    if (photos.length === 0) {
+        photoContainer.innerHTML = `<p>해당 지역 및 카테고리에 대한 데이터가 없습니다.</p>`;
+    } else {
+        photos.forEach(photo => {
+            const photoCard = document.createElement('div');
+            photoCard.className = 'photo-card';
+            photoCard.innerHTML = `
+                <img src="/static/travel_page/images/${photo.image}" alt="${photo.name}">
+                <h3>${photo.name}</h3>
+            `;
+            photoCard.addEventListener('click', () => {
+                window.location.href = `/detail/${encodeURIComponent(photo.name)}/`;
             });
-        }
-    };
+            photoContainer.appendChild(photoCard);
+        });
+    }
+};
 
 
     // 탭 전환 함수

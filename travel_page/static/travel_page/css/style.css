@@ -250,46 +250,57 @@ a:active, button:active {
     font-size: 14px;
     color: #333;
 }
-
-#category-select {
-    font-size: 16px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 위아래로 정렬 */
+    width: 100%; /* 가로 크기 */
+}
+.select-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 200px;
 }
 
-.category-select-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.category-label {
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.styled-select {
-    font-size: 16px;
-    padding: 10px 15px;
-    border: 1px solid #007bff;
+select.styled-select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #ccc;
     border-radius: 5px;
     background-color: white;
+    padding: 10px 15px;
+    font-size: 2rem;
     color: #333;
     cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+    text-align-last: center;
 }
 
-.styled-select:hover {
-    border-color: #0056b3;
-    background-color: #f8f9fa;
+.select-container::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 2rem;
+    color: #333;
 }
 
-.styled-select:focus {
-    border-color: #0056b3;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
+select.styled-select {
+    text-align: center;
+    text-align-last: center;
+}
+
+select.styled-select:hover {
+    border-color: #007bff; /* 호버 시 테두리 색상 변경 */
 }
 
 .photo-grid, .weather-grid {
@@ -336,6 +347,142 @@ a:active, button:active {
     font-size: 1rem;
     font-weight: bold;
 }
+
+.card {
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+}
+
+.card-header {
+    background-color: #f1f3f5;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+}
+
+.list-group-item {
+    border: none;
+    padding: 10px 15px;
+}
+
+.list-group-item + .list-group-item {
+    border-top: 1px solid #e9ecef;
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline-dark:hover {
+    background-color: #343a40;
+    color: white;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* 폼 스타일 */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    float: right;
+}
+
+/* 카드 스타일 */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
 
 /* 숨김 클래스 */
 .hidden {
@@ -395,7 +542,7 @@ a:active, button:active {
     margin-bottom: 20px;
 
 }
-
+select
 .swiper-slide {
     position: relative;
     display: flex;

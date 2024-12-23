@@ -13,7 +13,7 @@
                         <p>{{ image.description }}</p>
                         <a href="#" class="btn">자세히 보기</a>
                     </div>
-                    <img src="{% static 'travel_page/images/jeonju.png' %}" alt="{{ image.alt }}">
+                    <img src="{% static 'travel_page/images/' %}{{ image.file }}" alt="{{ image.alt }}">
                 </div>
             </div>
             {% endfor %}
@@ -29,7 +29,7 @@
   <div class="button-container">
         {% for option in options %}
         <div class="option-card" onclick="location.href='{{ option.link }}';">
-            <img src="{% static 'travel_page/images/{{ option.image }}' %}" alt="{{ option.name }}">
+            <img src="{% static 'travel_page/images/' %}{{ option.image }}" alt="{{ option.name }}">
           <div class="option-text">{{ option.name }}</div>
         </div>
         {% endfor %}
