@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- 게시물 리스트 섹션 -->
+        <div class="col-md-8">
+            <h2 class="mb-4">게시물 목록
+                {% if category %}<span class="badge bg-secondary">{{ category }}</span>{% endif %}
+                {% if tag %}<span class="badge bg-secondary"><i class="fas fa-tags"></i>{{ tag }} ({{ tag.post_set.count }})</span>{% endif %}
+            </h2>
+
+            {% for p in posts %}
+            <div class="card mb-4" id="post-{{ p.pk }}" onclick="location.href='{{ p.get_absolute_url }}';" style="cursor: pointer;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        {% if p.head_image %}
+                            <img class="img-fluid rounded-start" src="{{ p.head_image.url }}" alt="{{ p.title }} head image" style="height: 100%; object-fit: cover;">
+                        {% else %}
+                            <img class="card-img-top" src="https://picsum.photos/seed/{{ p.id }}/200/170" alt="random_image" />
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ p.title }}</h5>
+                            <p class="card-text text-muted">{{ p.hook_text }}</p>
+                            <p class="card-text">작성자: {{ p.author }} | 작성일: {{ p.created_at|date:"Y년 m월 d일" }}</p>
+                            <p class="card-text">
+                                {% if p.category %}
+                                    <a href="{{ p.category.get_absolute_url }}" class="badge bg-secondary">{{ p.category }}</a>
+                                {% else %}
+                                    <span class="badge bg-secondary">미분류</span>
+                                {% endif %}
+                                {% if p.tags.exists %}
+                                    <i class="fas fa-tags"></i>
+                                    {% for tag in p.tags.iterator %}
+                                        <a href="{{ tag.get_absolute_url }}" class="badge bg-pill bg-light text-black">{{ tag }}</a>
+                                    {% endfor %}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- 페이지네이션 -->
+            <nav class="mt-4">
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">이전</a></li>
+                    {% endif %}
+                    {% for page_num in page_obj.paginator.page_range %}
+                        <li class="page-item {% if page_obj.number == page_num %}active{% endif %}">
+                            <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
+                        </li>
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">다음</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+
+        <!-- 카테고리 섹션 -->
+        <div class="col-md-4">
+            <h3 class="mb-3">카테고리</h3>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{% url 'community:category_page' slug='no_category' %}">미분류</a>
+                    <span class="badge bg-primary rounded-pill">{{ no_category_post_count }}</span>
+                </li>
+                {% for category in categories %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{% url 'community:category_page' slug=category.slug %}">{{ category.name }}</a>
+                    <span class="badge bg-primary rounded-pill">{{ category.post_set.count }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
