@@ -5,6 +5,7 @@ from .models import Post, Category, Tag
 from django.core.exceptions import PermissionDenied
 from django.utils.text import slugify
 
+
 class PostCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Post
     fields = ['title', 'hook_text', 'content', 'head_image', 'file_upload', 'category']
@@ -123,14 +124,14 @@ def category_page(request, slug):
 
 
 def tag_page(request, slug):
-    tag = Tag.objects.get(slug=slug)
+    tag = get_object_or_404(Tag, slug=slug)
     post_list = tag.post_set.all()
 
     return render(
         request,
         'community/post_list.html',
         {
-            'post_list': post_list,
+            'posts': post_list,
             'tag': tag,
             'categories': Category.objects.all(),
             'no_category_post_count': Post.objects.filter(category=None).count(),
