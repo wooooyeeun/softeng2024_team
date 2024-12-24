@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {% for image in images %}
+        <div class="swiper-slide">
+            <div class="slide-content">
+                <div class="slide-text">
+                    <h3 class="slide-title">{{ image.title }}</h3>
+                    <p class="slide-description">{{ image.description }}</p>
+                </div>
+                <div class="slide-image-container">
+                    <img src="{% static 'travel_page/images/' %}{{ image.file }}" alt="{{ image.alt }}" class="slide-image">
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Pagination (이 위치는 CSS에서 박스 내부로 위치 조정) -->
+    <div class="swiper-pagination"></div>
+    <!-- Navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<div class="button-container">
+  <div class="button-container">
+        {% for option in options %}
+        <div class="option-card" onclick="location.href='{{ option.link }}';">
+            <img src="{% static 'travel_page/images/' %}{{ option.image }}" alt="{{ option.name }}">
+        <div class="option-text">{{ option.name }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
